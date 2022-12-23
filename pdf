@@ -1,0 +1,12 @@
+#! /bin/bash
+
+OUTDIR=build/main
+
+mkdirp $OUTDIR
+
+tectonic tectonic -X compile \
+  -k \
+  -o $OUTDIR \
+  --pass default \
+  -Z shell-escape \
+  src/main.tex
